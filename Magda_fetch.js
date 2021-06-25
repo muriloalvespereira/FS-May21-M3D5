@@ -53,7 +53,7 @@ function firstBtn() {
 window.onload =  () => {
     fetchQueen()
     fetchAlbum("75621062")
-    getAlbum()
+    
     }
 
 //fetch deadEnd for Queen and display in console
@@ -65,10 +65,8 @@ window.onload =  () => {
         .then(resp => { 
             return resp.json()
         })
-        .then(data => console.log(data))
+        .then(artist => console.log(artist))
     }
-
-
 
 //--------------------------------------------fetch albums  and display in console
 const fetchAlbum = function () {
@@ -77,36 +75,43 @@ const fetchAlbum = function () {
     })
     .then((resp) => { 
         return resp.json()
+        
     })
-    .then(({ data} )  =>  {
-        console.log(data);
-        let displayAlbums = document.querySelector(".row-display");
-            data.forEach((titles) => {
+    .then(({ artist} )  =>  {
+        console.log(artist.name);
+
+        let displayAlbum = document.querySelector(".row-display");
+        
+          //  data.forEach((titles) => {
             
-            displayAlbums.insertAdjacentHTML("beforeend",   
-            `                <div class="col pl-0">
+            displayAlbum.insertAdjacentHTML("beforeend",   
+            `                
+            
+            
+            
+            <div class="col pl-0">
                   <div class="card h-100">
                     <div class="position-relative">
                       <img
-                        src="${titles.album.cover_medium}"
+                        src="${artist.picture}"
                         class="card-img-top img-fluid rounded py-3 px-2"
                         alt="..."           />
-                      <div class="play">${titles.artist.name}
+                      <div class="play">${artist.title}
                       </div>
                     </div>
                     <div class="card-body px-2 pt-0">
                       <h5 class="card-title mb-1 text-white">
-                        ${titles.title}
+                        ${artist.name}
                       </h5>
-                      <p class="card-text text-white-50">${titles.id}</p>
+                      <p class="card-text text-white-50">${artist.id}</p>
                     </div>
                   </div>
                 </div> `
            )
-}
-)
+//}
+
     }
     )
+
+
 }
-
-
