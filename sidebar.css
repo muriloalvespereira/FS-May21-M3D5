@@ -1,0 +1,117 @@
+.spotify-logo {
+  height: 70px;
+  width: 100px;
+}
+.spotify-logo::after {
+  content: "Spotify";
+}
+/* footer > div > div::after {
+  content: "Upgrade to premium";
+} */
+/* .playlist {
+    position: absolute;
+  } */
+.btn-create {
+  padding: 6px;
+  cursor: pointer;
+}
+.plus-btn {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: #b6b6b6;
+  padding: 0;
+  margin: auto;
+}
+
+.plus-btn::before {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+}
+.plus-btn::after {
+  content: "";
+  position: absolute;
+  height: 0.1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+}
+li {
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.search:hover,
+.home:hover,
+.library:hover,
+.liked:hover,
+.create:hover {
+  color: white;
+}
+footer {
+  position: fixed;
+  bottom: 90px;
+  background-color: black;
+}
+
+/* .liked-btn {
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+  .liked-btn:before,
+  .liked-btn:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: white;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  .liked-btn:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  } */
+
+.player {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 90px;
+  color: white;
+  z-index: 100;
+  line-height: 90px;
+  text-align: center;
+}
+.player-content {
+  display: flex;
+}
+.player-content img {
+  height: 90px;
+}
+.player-content p {
+  margin-top: 0;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.list-unstyled {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}

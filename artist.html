@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="artist.css" />
+    <script
+      src="https://kit.fontawesome.com/1a2c6a184e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- ----------------- SIDE BAR ----------------- -->
+    <div class="side-bar d-flex" style="width: 236px; background-color: black">
+      <div class="row">
+        <div class="col-12">
+          <div class="logo ml-4">
+            <svg
+              viewBox="0 0 1134 340"
+              class="spotify-logo--text mt-4"
+              id="logo"
+            >
+              <title>Spotify</title>
+              <path
+                class="currentColor"
+                d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+              ></path>
+            </svg>
+          </div>
+
+          <section class="top mt-3 ml-4">
+            <div class="row">
+              <div class="col-12 d-flex align-items-center pb-3 put-color">
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-house-door"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"
+                    />
+                  </svg>
+                </div>
+                <div class="d-flex">
+                  <h6 class="d-flex pl-3 mb-0">
+                    <a href="./index.html" class="put-color a-changes">Home</a>
+                  </h6>
+                </div>
+              </div>
+              <div
+                class="col-12 search d-flex align-items-center pb-3 put-color"
+              >
+                <div class="d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </div>
+                <div class="d-flex">
+                  <h6 class="d-flex pl-3 mb-0">Search</h6>
+                </div>
+              </div>
+              <div
+                class="col-12 library d-flex align-items-center pb-3 put-color"
+              >
+                <div class="d-flex">
+                  <svg
+                    viewBox="0 0 512 512"
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="library-icon"
+                  >
+                    <path
+                      d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="d-flex">
+                  <h6 class="pl-3 mb-0">Your Library</h6>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="middle mt-5 ml-4">
+            <div class="d-flex create align-items-center put-color">
+              <div
+                onclick="addPlaylist()"
+                class="border d-flex btn-create"
+                style="background-color: #b6b6b6"
+              >
+                <div class="plus-btn"></div>
+              </div>
+
+              <div class="d-flex">
+                <h6 class="pl-3 mb-0">Create Playlist</h6>
+              </div>
+            </div>
+            <div class="d-flex liked align-items-center pb-3 pt-3 put-color">
+              <div class="liked-songs">
+                <svg
+                  role="img"
+                  height="14"
+                  width="23"
+                  viewBox="0 0 16 22"
+                  class="Svg-ulyrgf-0 ghlXvf"
+                >
+                  <path fill="none" d="M0 0h16v16H0z"></path>
+                  <path
+                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="d-flex">
+                <h6 class="pl-3 mb-0">Liked Songs</h6>
+              </div>
+            </div>
+
+            <div class="mr-3"><div class="border-bottom"></div></div>
+          </section>
+          <section class="playlist mt-4 ml-4">
+            <div class="added-playlist">
+              <ul class="list-unstyled text-white-50" id="add-list">
+                <li></li>
+              </ul>
+            </div>
+          </section>
+          <section class="ml-4">
+            <footer>
+              <div class="d-flex align-items-center pt-3 put-color">
+                <div class="pb-3 footer-logo d-flex">
+                  <svg
+                    class="color-svg"
+                    role="img"
+                    height="20"
+                    width="20"
+                    viewBox="0 0 24 24"
+                    class="Svg-ulyrgf-0 ghlXvf"
+                  >
+                    <path
+                      d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm5.366 15.857a.955.955 0 01-1.302.367 11.409 11.409 0 00-4.451-1.402 11.443 11.443 0 00-4.653.482.957.957 0 01-.582-1.823 13.32 13.32 0 015.429-.563c1.843.188 3.59.738 5.193 1.636.46.259.624.842.366 1.303zm1.318-3.341a.957.957 0 01-1.29.407 14.965 14.965 0 00-5.423-1.618 14.887 14.887 0 00-5.675.505.958.958 0 01-.53-1.838 16.847 16.847 0 016.398-.571c2.153.219 4.21.833 6.114 1.825.468.244.65.822.406 1.29zm.476-2.779a.957.957 0 01-.426-.1 18.475 18.475 0 00-6.406-1.849 18.472 18.472 0 00-6.66.526.958.958 0 01-.494-1.849 20.386 20.386 0 017.346-.581c2.478.251 4.856.938 7.066 2.04a.956.956 0 01-.426 1.813z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="d-flex">
+                  <h6 class="mb-3 pl-1">Upgrade to premium</h6>
+                </div>
+              </div>
+              <div
+                class="position-relative show-album d-none"
+                style="height: 218px"
+              >
+                <div class="under-upgrade">
+                  <img src="./img/drake.png" class="under-premium" alt="" />
+                  <div class="photo-play-two">
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------- SIDE BAR ----------------- -->
+    <div class="container-fluid pl-0">
+      <div class="row big-row">
+        <div style="width: 210px"></div>
+
+        <div class="col pr-0">
+          <div class="img-bgd">
+            <div class="album-name text-white">
+              <p>
+                <i class="bi bi-patch-check-fill text-primary"></i> Verified
+                Artist
+              </p>
+              <h1 class="name font-weight-bolder">Ed Sheeran</h1>
+              <p class="number-listner">50,466,868 monthly listners</p>
+            </div>
+            <!-- ----------------- NAV BAR ----------------- -->
+            <div class="row pt-3 pb-3 px-3 justify-content-between navrow">
+              <div class="btn-nav d-flex">
+                <div class="buttom-nav-left">
+                  <svg
+                    role="img"
+                    focusable="false"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    class="
+                      Svg-sc-1usfroi-0
+                      kcaoHR
+                      _6fe5d5efc9b4a07d5c424071ac7cdacb-scss
+                    "
+                  >
+                    <polyline
+                      points="16 4 7 12 16 20"
+                      fill="none"
+                      stroke="#ffffff"
+                    ></polyline>
+                  </svg>
+                </div>
+                <div class="buttom-nav-right ml-3">
+                  <svg
+                    role="img"
+                    focusable="false"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    class="
+                      Svg-sc-1usfroi-0
+                      kcaoHR
+                      _6fe5d5efc9b4a07d5c424071ac7cdacb-scss
+                    "
+                  >
+                    <polyline
+                      points="8 4 17 12 8 20"
+                      fill="none"
+                      stroke="#ffffff"
+                    ></polyline>
+                  </svg>
+                </div>
+                <div class="ml-4 play-button-nav-top position-absolute">
+                  <div class="play-button-nav-top-2nd"></div>
+                </div>
+                <div class="text-white name-top">Ed Sheeran</div>
+              </div>
+              <div class="buttom-avatar-nav">
+                <div class="avatar-nav d-flex justify-content-between pb-1">
+                  <div class="pl-1">
+                    <img
+                      src="./assets/muriloavatar.png"
+                      class="img-fluid img-avatar"
+                      alt=""
+                    />
+                  </div>
+                  <div><span>Murilo Alves</span></div>
+                  <div class="pr-2"><i class="bi bi-caret-down-fill"></i></div>
+                  <div class="account-avatar">
+                    <div class="p-1 d-flex menu-avatar">
+                      <div
+                        class="
+                          d-flex
+                          btw-menu-avatar
+                          align-items-center
+                          hide-over
+                        "
+                      >
+                        <p class="mb-0 py-2">Account</p>
+                        <svg
+                          role="img"
+                          height="16"
+                          width="16"
+                          viewBox="0 0 16 16"
+                          class="Svg-ulyrgf-0 ghlXvf"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="hide-over">
+                        <p class="mb-0 py-2">Profile</p>
+                      </div>
+                      <div
+                        class="
+                          d-flex
+                          btw-menu-avatar
+                          align-items-center
+                          hide-over
+                        "
+                      >
+                        <p class="mb-0 py-2">Go to Premium</p>
+                        <svg
+                          role="img"
+                          height="16"
+                          width="16"
+                          viewBox="0 0 16 16"
+                          class="Svg-ulyrgf-0 ghlXvf"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="hide-over">
+                        <p class="mb-0 py-2">
+                          <a href="./login.html" class="a-changes-menu"
+                            >Log out</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ----------------- NAV BAR ----------------- -->
+          </div>
+          <div class="col">
+            <div class="container main-container" style="max-width: 100%">
+              <div class="row">
+                <div class="col d-flex align-items-center mt-4">
+                  <div class="play-button position-relative">
+                    <div class="play-button-two"></div>
+                  </div>
+
+                  <div>
+                    <span class="follow text-white">Follow</span>
+                  </div>
+                  <div class="three-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row py-3">
+                <div
+                  class="
+                    col-lg-8 col-sm-12
+                    text-white text-title
+                    font-weight-bold
+                  "
+                >
+                  Popular
+                </div>
+              </div>
+              <div class="row pl-4">
+                <div class="col-lg-8 col-sm-12 text-white">
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">1</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Perfect</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">2</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Shape of you</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">3</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran3.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Photograph</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">4</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Afterglow</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">5</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheran2.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">
+                          Thinking out loud
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 text-white">
+                  <div class="row mt-lg-n5 mb-3 pl-3">
+                    <div
+                      class="
+                        text-title
+                        col col-lg-4
+                        text-white
+                        font-weight-bold
+                        text-nowrap
+                      "
+                    >
+                      Artist pick
+                    </div>
+                  </div>
+                  <div class="col d-flex">
+                    <div class="imgg-right">
+                      <img
+                        src="./img/Adam-Lambert-ALBUM-COVER.jpg"
+                        class="img-thumb"
+                        alt=""
+                      />
+                    </div>
+                    <div class="last-img pl-3">
+                      <p class="text-white-50 posted">
+                        <img
+                          src="/img/ED.jpg"
+                          class="rounded rounded-circle px-1 py-1"
+                          alt=""
+                        />Posted By Ed Sheeran
+                      </p>
+                      <p class="album-name-small pl-1">Ed Sheeran Best Of</p>
+                      <p class="text-white-50 posted pl-1">Playlist</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mt-3">
+                  <a
+                    href="#"
+                    class="see-more text-white-50 pl-3"
+                    style="font-size: 14px"
+                    >SEE MORE</a
+                  >
+                </div>
+              </div>
+
+              <div class="row justify-content-between px-3">
+                <div class="d-flex">
+                  <h6 class="mt-5 h6-body">Recently Played</h6>
+                </div>
+                <div class="d-flex">
+                  <h6 class="see-all mt-3"></h6>
+                </div>
+              </div>
+
+              <div class="row px-3 manual-query">
+                <div class="col pl-0">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1517966385artwork.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Impaulsive with Logan pau
+                      </h5>
+                      <p class="card-text text-white-50">Logan Paul</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/image.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Impaulsive with Logan pau
+                      </h5>
+                      <p class="card-text text-white-50">Logan Paul</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-sm-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/timferrissshowart-1400x1400.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        The Tim Ferriss Show
+                      </h5>
+                      <p class="card-text text-white-50">
+                        Tim Ferriss: Best Selling Author, Human Guinea Pig
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-md-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1517966385artwork.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="the weeknd"
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Armchair Expert with Dax Shepard
+                      </h5>
+                      <p class="card-text text-white-50">Armchair Umbrella</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1200x1200bb.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        The Yang Gang Podcast
+                      </h5>
+                      <p class="card-text text-white-50">Yang Gang Podcast</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col pr-0 d-none d-xl-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/dualipa.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">Dua Lipa</h5>
+                      <p class="card-text text-white-50">Artist</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+              <div class="row justify-content-between px-3">
+                <div class="d-flex">
+                  <h6 class="mt-3 h6-body">Shows to try</h6>
+                </div>
+                <div class="d-flex">
+                  <h6 class="see-all mt-3">SEE ALL</h6>
+                </div>
+              </div>
+              <div class="row px-3">
+                <div class="d-flex">
+                  <h6 class="sub-title">
+                    Podcasts we think you'll get hooked on.
+                  </h6>
+                </div>
+              </div>
+              <div class="row px-3 manual-query">
+                <div class="col pl-0">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1517966385artwork.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Impaulsive with Logan pau
+                      </h5>
+                      <p class="card-text text-white-50">Logan Paul</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/image.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Impaulsive with Logan pau
+                      </h5>
+                      <p class="card-text text-white-50">Logan Paul</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-sm-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/timferrissshowart-1400x1400.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        The Tim Ferriss Show
+                      </h5>
+                      <p class="card-text text-white-50">
+                        Tim Ferriss: Best Selling Author, Human Guinea Pig
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-md-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1517966385artwork.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="the weeknd"
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        Armchair Expert with Dax Shepard
+                      </h5>
+                      <p class="card-text text-white-50">Armchair Umbrella</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/1200x1200bb.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">
+                        The Yang Gang Podcast
+                      </h5>
+                      <p class="card-text text-white-50">Yang Gang Podcast</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col pr-0 d-none d-xl-block">
+                  <div class="card h-100">
+                    <div class="position-relative">
+                      <img
+                        src="./img/dualipa.jpg"
+                        class="card-img-top img-fluid rounded py-3 px-2"
+                        alt="..."
+                      />
+
+                      <div class="play"></div>
+                    </div>
+
+                    <div class="card-body px-2 pt-0">
+                      <h5 class="card-title mb-1 text-white">Dua Lipa</h5>
+                      <p class="card-text text-white-50">Artist</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <div class="d-flex justify-content-between">
+        <div class="col d-flex no-gutters pl-0">
+          <div class="row row-bottom">
+            <div class="col img-nav-bottom">
+              <div class="card-img-bottom"></div>
+              <!-- <img
+                src="./img/smalldrake.jpg"
+                class="card-img-bottom img-fluid"
+                alt="..."
+              /> -->
+              <div class="photo-play">
+                <i class="fas fa-chevron-up"></i>
+              </div>
+            </div>
+            <div class="col d-flex direction-bar pl-3 pt-1">
+              <h6 class="pt-4 mb-0 h6-bottom text-nowrap">Survival</h6>
+              <p class="mb-0 p-bottom">Drake</p>
+            </div>
+            <div class="col heart-bottom d-flex align-items-center">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path
+                  d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                ></path>
+              </svg>
+            </div>
+            <div class="col window-btn-bottom d-flex align-items-center">
+              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <g class="currentColor" fill-rule="evenodd">
+                  <path
+                    d="M1 3v9h14V3H1zm0-1h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"
+                    fill-rule="nonzero"
+                  ></path>
+                  <path d="M10 8h4v3h-4z"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <div class="d-inline-block mr-3 queue-btn">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path
+                  d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"
+                ></path>
+              </svg>
+            </div>
+            <div class="d-inline-block align-items-center queue-btn">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
+              </svg>
+            </div>
+            <div class="d-inline-block ml-3 pt-3">
+              <div class="play-bottom"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="d-inline-block ml-3 queue-btn">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
+              </svg>
+            </div>
+            <div class="d-inline-block ml-3 queue-btn">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path
+                  d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="d-flex mt-3">
+            <div id="current-duration" style="color: white">00:00</div>
+            <input
+              type="range"
+              min="0"
+              max="0"
+              step="1"
+              id="seekbar"
+              class="w-100"
+            />
+            <div id="total-duration" style="color: white">00:00</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex last-col pr-5 align-items-center">
+            <div class="d-inline-block align-items-center queue-btn">
+              <i class="svg-color bi bi-border-width"></i>
+            </div>
+            <div class="d-inline-block ml-3 queue-btn">
+              <i class="svg-color fas fa-tablet-alt"></i>
+            </div>
+            <div class="d-inline-block ml-3 queue-btn" id="vol">
+              <svg
+                class="svg-color"
+                role="presentation"
+                height="16"
+                width="16"
+                aria-label="Volume élevé"
+                id="volume-icon"
+                viewBox="0 0 16 16"
+                class="Svg-ulyrgf-0 ghlXvf"
+              >
+                <path
+                  d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z"
+                ></path>
+              </svg>
+            </div>
+            <div class="d-inline-block ml-3 margin-volume">
+              <form>
+                <div class="form-group">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    id="vol-control"
+                    step="1"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 150px"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+      let showUpAlbum = document.querySelector(".photo-play");
+      let showUpAlbumOne = document.querySelector(".img-nav-bottom");
+      let showUpAlbumTwo = document.querySelector(".show-album");
+      showUpAlbum.onclick = function () {
+        showUpAlbumOne.classList.remove("d-flex");
+        showUpAlbumOne.classList.add("d-none");
+        showUpAlbumTwo.classList.remove("d-none");
+        showUpAlbumTwo.classList.add("d-flex");
+      };
+      let hideUpAlbum = document.querySelector(".photo-play-two");
+      hideUpAlbum.onclick = function () {
+        showUpAlbumTwo.classList.remove("d-flex");
+        showUpAlbumTwo.classList.add("d-none");
+        showUpAlbumOne.classList.add("d-flex");
+      };
+    </script>
+
+    <script type="text/javascript">
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 50) {
+            $(".navrow").addClass("menu-different-three");
+          } else {
+            $(".navrow").removeClass("menu-different-three");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 285) {
+            $(".navrow").addClass("menu-different-four");
+          } else {
+            $(".navrow").removeClass("menu-different-four");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 330) {
+            $(".play-button-nav-top").addClass("show-play");
+          } else {
+            $(".play-button-nav-top").removeClass("show-play");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 330) {
+            $(".name-top").addClass("show-play");
+          } else {
+            $(".name-top").removeClass("show-play");
+          }
+        });
+      });
+    </script>
+
+    <!-- <script>
+      window.onload = function () {
+        const el = document.querySelector(".range");
+
+        el.addEventListener("change", (e) => {
+
+          el.style.setProperty("--value", el.value);
+          el.style.setProperty("--min", el.min === "" ? "0" : el.min);
+          el.style.setProperty("--max", el.max === "" ? "100" : el.max);
+          el.style.setProperty("--value", el.value);
+        });
+    </script> -->
+    <script src="index.js" type="module"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

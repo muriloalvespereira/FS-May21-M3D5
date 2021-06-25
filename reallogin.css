@@ -1,0 +1,130 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+h6 {
+  display: flex;
+  flex-direction: row;
+}
+h6:before,
+h6:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+h6:before,
+h6:after {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(206, 204, 204);
+}
+.style-name {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.btn-new {
+  background-color: transparent;
+  border: 1px solid black;
+  font-size: 12px;
+  font-weight: 500;
+}
+/* ++++++++++++++++++++++++++++++++++++ */
+.check {
+  -webkit-appearance: none; /*hides the default checkbox*/
+  height: 20px;
+  width: 20px;
+  /* position: absolute; */
+  /* top: 20px;
+   left: 15px; */
+  transition: 0.1s;
+  background-color: white;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #27ae60;
+}
+
+/* .check:before {
+  position: absolute;
+  content: "✔";
+  color: #27ae60;
+  transform: translateX(-8px);
+  opacity: 0;
+} */
+.check:checked:before {
+  position: absolute;
+  content: "✔";
+  color: white;
+  transform: translateX(-50px);
+  position: relative;
+  opacity: 1;
+}
+/* .check:checked {
+  background-color: #27ae60;
+} */
+
+.check:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.privacy {
+  font-size: 8px;
+}
+
+/* ------------------------------- */
+form .fas {
+  top: 13px;
+  right: 1rem;
+}
+
+.spotify-logo--text {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.lockk {
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+}
+
+.to-continue {
+  font-weight: 800;
+  font-size: 12px;
+}
+.continue {
+  font-size: 12.2px;
+  padding-left: 9px;
+  font-weight: 700;
+}
+
+.or {
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.text-success {
+  font-size: 12px;
+}
+
+.donnot {
+  font-size: 13px;
+  font-weight: bold;
+}
+.big-box {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.privacy a {
+  font-size: 8px;
+}
