@@ -2,6 +2,7 @@
 let albumList ;
 
 /* Murino methode 
+
 function firstBtn() {
     fetch(
       "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen",
@@ -46,8 +47,8 @@ function firstBtn() {
   }
 
   firstBtn()
-*/
 
+*/
 
 window.onload =  () => {
     fetchQueen()
@@ -107,5 +108,5 @@ const fetchAlbum = function () {
     }
     )
 }
-*/
+
 
