@@ -230,6 +230,7 @@ p img {
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: bolder;
+  flex-direction: column;
   /* font-size: 14px; */
 }
 .padding-list {
